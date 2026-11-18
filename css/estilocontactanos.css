@@ -1,0 +1,137 @@
+/* Estilo general del cuerpo y fondo */
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header.navbar {
+    background-color: #1e293b;
+    color: #ffffff;
+    /* Aumentamos la altura con un padding vertical cómodo */
+    padding: 25px 50px;
+    
+    /* Cambiamos a flex normal para alinear los elementos de izquierda a derecha */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px; /* Espacio de separación entre el logo y los enlaces de navegación */
+}
+
+header.navbar h2.logo {
+    color: #ff6b35;
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Contenedor del menú ubicado a la izquierda, junto al logo */
+header.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaciado uniforme entre 'Inicio' y 'Contáctanos' */
+}
+
+/* Enlaces de Inicio y Contáctanos */
+header.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header.navbar nav a:hover {
+    color: #ff6b35;
+}
+
+/* Contenedor principal de la sección de contacto (Distribución en Flexbox) */
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor del mapa */
+.mapa {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.mapa iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del formulario */
+.formulario {
+    flex: 1.2;
+    min-width: 350px;
+}
+
+/* Título Contáctanos */
+.formulario h2 {
+    font-size: 26px;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+/* Estructura de los campos del formulario */
+#formContacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Campos de texto y textarea */
+#formContacto input[type="text"],
+#formContacto input[type="email"],
+#formContacto input[type="tel"],
+#formContacto textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#formContacto input:focus,
+#formContacto textarea:focus {
+    border-color: #6b533f;
+}
+
+/* Área de mensaje específica */
+#formContacto textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Botón de Enviar */
+#formContacto button,
+#formContacto input[type="submit"] {
+    background-color: #5c4734; /* Tono marrón oscuro similar al de la imagen */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s;
+}
+
+#formContacto button:hover,
+#formContacto input[type="submit"]:hover {
+    background-color: #433325;
+}

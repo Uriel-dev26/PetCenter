@@ -1,0 +1,120 @@
+/* ESTILOS GENERALES Y FUENTES */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado / Navbar simulado en base al diseño */
+/*  BARRA DE NAVEGACIÓN (HEADER / NAVBAR) */
+header.navbar {
+    background-color: #1e293b;
+    color: #ffffff;
+    /* Aumentamos la altura con un padding vertical cómodo */
+    padding: 25px 50px;
+    
+    /* Cambiamos a flex normal para alinear los elementos de izquierda a derecha */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px; /* Espacio de separación entre el logo y los enlaces de navegación */
+}
+
+header.navbar h2.logo {
+    color: #ff6b35;
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Contenedor del menú ubicado a la izquierda, junto al logo */
+header.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaciado uniforme entre 'Inicio' y 'Contáctanos' */
+}
+
+/* Enlaces de Inicio y Contáctanos */
+header.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header.navbar nav a:hover {
+    color: #ff6b35;
+}
+
+/* SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) */
+.faq-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Título Principal */
+.faq-title {
+    text-align: center;
+    color: #1a1f2c;
+    font-size: 38px;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Si usas la fuente Lobster importada */
+.lobster-title {
+    font-family: 'Lobster', cursive;
+}
+
+/* Contenedor de cada pregunta/respuesta */
+.faq-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #fdfdfd;
+    border: 1px solid #eaeaea;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    border-color: #ff6b35;
+}
+
+/* Ícono decorativo (Huella/Logo) */
+.faq-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 4px;
+    background-color: #fff4f0;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+/* Texto de la pregunta (h3) */
+.faq-item h3 {
+    margin: 0 0 8px 0;
+    color: #1a1f2c;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Texto de la respuesta (p) */
+.faq-item p {
+    margin: 0;
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.6;
+}

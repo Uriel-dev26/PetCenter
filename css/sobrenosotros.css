@@ -1,0 +1,169 @@
+:root {
+            --color-primary: #1e293b; /* Azul oscuro del menu/encabezado */
+            --color-accent: #ff5e36;  /* Naranja de los botones de oferta */
+            --color-bg-light: #f8f9fa;/* Fondo claro de la web */
+            --color-text: #333333;
+            --color-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-bg-light);
+            color: var(--color-text);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Contenedor principal de la barra de navegación */
+header.navbar {
+    background-color: #1e293b;
+    color: #ffffff;
+    /* Aumentamos la altura con un padding vertical cómodo */
+    padding: 25px 50px;
+    
+    /* Cambiamos a flex normal para alinear los elementos de izquierda a derecha */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 60px; /* Espacio de separación entre el logo y los enlaces de navegación */
+}
+
+header.navbar h2.logo {
+    color: #ff6b35;
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Contenedor del menú ubicado a la izquierda, junto al logo */
+header.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaciado uniforme entre 'Inicio' y 'Contáctanos' */
+}
+
+/* Enlaces de Inicio y Contáctanos */
+header.navbar nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header.navbar nav a:hover {
+    color: #ff6b35;
+}
+
+        /* Banner Hero */
+        .hero-section {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sección Quienes Somos */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .about-text h2 {
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        /* Misión, Visión, Valores */
+        .cards-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Compromiso / Banner CTA */
+        .commitment-banner {
+            background-color: var(--color-white);
+            border-left: 5px solid var(--color-accent);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .commitment-banner h3 {
+            margin-top: 0;
+            color: var(--color-primary);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }

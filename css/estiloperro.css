@@ -1,0 +1,47 @@
+/* --- Banner Específico para Perros --- */
+.hero-banner-dog {
+    /* Puedes cambiar 'img/gato-banner.jpg' por la ruta de la foto de gato que elijas guardar en tu carpeta img */
+    background: linear-gradient(rgba(30, 41, 59, 0.65), rgba(30, 41, 59, 0.65)), url('../img/img_menuprincipal/SeccionPerros2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-lg);
+    padding: 70px 40px;
+    margin-bottom: 40px;
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-banner-dog .hero-content {
+    max-width: 600px;
+}
+
+.hero-banner-dog h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero-banner-dog p {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.hero-dog-image {
+    max-width: 400px; /* Puedes ajustar este valor según el tamaño deseado */
+    width: 100%;
+}
+
+.hero-dog-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}

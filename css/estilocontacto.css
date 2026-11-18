@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap");
+
+:root {
+    --fondo: #f8fafc;
+    --superficie: #ffffff;
+    --tinta: #1e293b;
+    --tinta-suave: #64748b;
+    --borde: #e2e8f0;
+    --acento: #ff5e36;        /* Naranja PetCenter */
+    --acento-oscuro: #e04822;
+    --secundario: #00a896;    /* Verde Menta PetCenter */
+    --enfoque: rgba(255, 94, 54, 0.3);
+    --radio: 12px;
+}
+
+/* ---------- Textos y Títulos del Registro ---------- */
+main h1 {
+    margin: 2.5rem auto 0.5rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--acento);
+}
+
+main .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--tinta-suave);
+}
+
+/* ---------- Formulario de Registro (Aplica solo al form principal) ---------- */
+main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+    padding: 2.5rem;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+main form .campo {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+main form .campo.mitad {
+    grid-column: span 1;
+}
+
+main form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--tinta);
+}
+
+main form input[type="text"],
+main form input[type="email"],
+main form input[type="tel"],
+main form input[type="password"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--borde);
+    border-radius: 8px;
+    color: var(--tinta);
+    font: inherit;
+    transition: all 0.2s ease;
+}
+
+main form input:focus {
+    outline: none;
+    border-color: var(--acento);
+    box-shadow: 0 0 0 4px var(--enfoque);
+}
+
+/* ---------- Botón de Registro ---------- */
+main form input[type="submit"] {
+    grid-column: span 2;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--tinta);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main form input[type="submit"]:hover {
+    background: var(--acento);
+}
+
+@media (max-width: 600px) {
+    main form .campo.mitad { 
+        grid-column: span 2; 
+    }
+    main form { 
+        padding: 1.5rem; 
+    }
+}

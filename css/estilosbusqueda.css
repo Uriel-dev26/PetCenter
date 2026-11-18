@@ -1,0 +1,138 @@
+/* Reset básico y fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, 
+nav a[aria-current="page"] {
+    color: #3498db;
+}
+
+/* Contenedor de búsqueda */
+#search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+#search form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+#search input[type="text"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+#search input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Contenedor de resultados (Grid adaptable) */
+#resultados {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjetas individuales de productos (.items) */
+.items {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.items:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.items h2 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.items p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Estilo adicional si deseas destacar el precio o stock */
+.items p:nth-of-type(2) { /* Precio */
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1rem;
+}
+
+/* Mensajes informativos o de error (sin resultados) */
+#resultados > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
